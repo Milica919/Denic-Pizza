@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Denic Pizza | Home</title>
+  <link>index.html</link>
+  <description>This is home page of our delicious website ! Come and enjoy !</description>
+  <item>
+    <title>Denic Pizza | About Us</title>
+    <link>aboutUs.html</link>
+    <description>Read about us as a company and what are we trying to do.</description>
+  </item>
+  <item>
+    <title>Denic Pizza | Menu</title>
+    <link>menu.html</link>
+    <description>See our menu and all the delicious pizza we have to offer !</description>
+  </item>
+  <item>
+    <title>Denic Pizza | Contact</title>
+    <link>contact.html</link>
+    <description>Contact us and come for some pizza !</description>
+  </item>
+  <item>
+    <title>Denic Pizza | Author</title>
+    <link>author.html</link>
+    <description>Read about our founder and see her work.</description>
+  </item>
+</channel>
+
+</rss>

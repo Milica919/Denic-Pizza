@@ -1,0 +1,1251 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@keyframes rot{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes scal{
+    0%{transform: scale(2); opacity: 0}
+    100%{transform: scale(1);}
+}
+
+@keyframes fad{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes trans1{
+    0%{transform: translateY(100px); opacity: 0;}
+    100%{transform: translateY(0px);}
+}
+
+$prva: 1300px;
+$druga: 1100px;
+$treca: 992px;
+$cetvrta: 768px;
+$peta: 650px;
+$sesta: 550px;
+$sedma: 510px;
+$osma: 425px;
+$deveta: 365px;
+
+
+@mixin prva {
+    @media (max-width: #{$prva}){
+        @content;
+    }
+}
+
+@mixin druga {
+    @media (max-width: #{$druga}){
+        @content;
+    }
+}
+
+@mixin treca {
+    @media (max-width: #{$treca}){
+        @content;
+    }
+}
+
+@mixin cetvrta {
+    @media (max-width: #{$cetvrta}){
+        @content;
+    }
+}
+
+@mixin peta {
+    @media (max-width: #{$peta}){
+        @content;
+    }
+}
+
+@mixin sesta {
+    @media (max-width: #{$sesta}){
+        @content;
+    }
+}
+
+@mixin sedma {
+    @media (max-width: #{$sedma}){
+        @content;
+    }
+}
+
+@mixin osma {
+    @media (max-width: #{$osma}){
+        @content;
+    }
+}
+
+@mixin deveta {
+    @media (max-width: #{$deveta}){
+        @content;
+    }
+}
+
+html{
+    font-family: 'Righteous', cursive;
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+}
+
+.zig:after{
+    background: 
+                linear-gradient(-45deg, transparent 16px, #424242 0), 
+                linear-gradient(45deg, transparent 16px, #424242  0);
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    background-size: 22px 32px;
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 32px;
+
+     position: fixed;
+    top:50px;
+    left:0px;
+}
+
+.sideList{
+    
+    li{
+        margin-top: 2%;
+
+        a{
+            font-family: 'Righteous', cursive;
+            font-size: 1.1em;
+            
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+.logoLink{
+
+    &:hover{
+        text-decoration: none;
+        background-image: none;
+        color: red;
+    }
+
+.logoText{
+    font-size: 1em;
+    font-family: 'Righteous', cursive;
+    text-decoration: none;
+    color: rgb(245, 182, 66);
+    width: 100%;
+    margin-left: 15%;
+
+    i{
+
+        @include sesta{
+            font-size: 1em;
+        }
+
+    }
+
+    .mm{
+
+        @include peta{
+            margin-right: 0px;
+        }
+    }
+
+    @include treca{
+        font-size: 0.9em;
+        margin-left: 0px;
+    }
+
+    @include peta{
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    @include sedma{
+        font-size: 0.7em;
+    }
+
+    @include osma{
+        font-size: 0.5em;
+    }
+
+
+}
+
+}
+
+.nav1{
+    position: fixed;
+    top: 0px;
+}
+
+.mainNav{
+
+    
+    li{
+        font-family: 'Righteous', cursive;
+
+        a{
+            font-size: 1.3em;
+
+            &:hover{
+                text-decoration: none;
+                background-color: #424242;
+                color: rgb(241, 188, 40);
+            }
+        }
+    }
+}
+
+body{
+
+    background-color: darken(#424242, 20%);
+
+    .imag{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        height: 100vh;
+        background-image: url("../images/cover.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
+        .faded1{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Righteous', cursive;
+
+            .cont1{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    animation-name: scal;
+                    animation-duration: 2.5s;
+                }
+
+                h1{
+                    color: rgb(228, 167, 55);
+                    font-size: 5em;
+
+                    @include treca{
+                        font-size: 3.2em;
+                    }
+
+                    @include cetvrta{
+                        font-size: 2.7em;
+                    }
+
+                    @include sedma{
+                        font-size: 3em;
+                        text-align: center;
+                    }
+
+                    @include deveta{
+                        padding-bottom: 5%;
+                        font-size: 2.6em;
+                    }
+                    
+                }
+
+                p{
+                    color: rgb(238, 121, 43);
+                    font-size: 1.7em;
+                    padding: 2% 0%;
+                    font-weight: bold;
+                }
+
+
+                a{
+                    text-decoration: none;
+                    animation: rot 1s infinite;
+
+                    i{
+                        font-size: 5em;
+                        color: rgb(219, 136, 10);
+                    }
+                }
+            }
+        }
+    }
+
+    .imag2{
+        margin: 10% 0%;
+        background-color: darken(#424242, 5%);
+        font-family: 'Righteous', cursive;
+
+        .row1{
+
+            .first{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                .textBox{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include treca{
+                        margin: 5% 0%;
+                    }
+                    
+
+                    h2{
+                        color: rgb(223, 148, 10);
+                        font-size: 3.8em;
+
+                        @include prva{
+                            font-size: 2.6em;
+                        }
+
+                        @include druga{
+                            font-size: 2.3em;
+                        }
+
+                        @include deveta{
+                            font-size: 1.8em;
+                        }
+
+                        label{
+                            font-size: 1em;
+                            color: rgb(223, 148, 10);
+                            border-bottom: 5px solid orange;
+                            padding-bottom: 2.4%;
+                        }
+                    }
+
+                    p{
+                        font-size: 2em;
+                        padding: 3% 0%;
+                        color: whitesmoke;
+
+                        @include prva{
+                            font-size: 1.4em;
+                        }
+
+                        @include druga{
+                            font-size: 1.2em;
+                        }
+
+                        @include sedma{
+                            font-size: 1em;
+                        }
+
+                        @include deveta{
+                            text-align: center;
+                        }
+                    }
+
+                    a{
+                        width: 20%;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 3%;
+
+                        @include prva{
+                            width: 30%;
+                        }
+
+                        @include sedma{
+                            width: 50%;
+                        }
+                    }
+
+                }
+            }
+
+            .second{
+
+                .imgHolder{
+
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+
+                    img{
+                        max-width: 100%;
+                        height: auto;
+
+                        @include treca{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .imag3{
+        background-color: darken(#424242, 5%);
+        margin-bottom: 8%;
+        font-family: 'Righteous', cursive;
+
+        .row2{
+            margin-bottom: 0px;
+
+            .specPad{
+                padding: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                .textBox1{
+                    width: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include treca{
+                        margin: 3% 0%;
+                    }
+
+
+                    h3{
+                        font-size: 3em;
+                        padding: 5% 0%;
+                        position: relative;
+
+                        @include prva{
+                            font-size: 2.6em;
+                        }
+
+                        @include druga{
+                            font-size: 2.3em;
+                        }
+
+                        @include treca{
+                            padding: 3% 0%;
+                        }
+
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            width: 60%;
+                            height: 3px;
+                            background-color: rgb(240, 154, 26);
+                            bottom: 12px;
+                            left: 30px;
+
+                            @include sedma{
+                                bottom: -10px;
+                            }
+                        }
+                    }
+
+                    p{
+                        color: whitesmoke;
+                        text-align: center;
+
+                        @include prva{
+                            font-size: 1.1em;
+                        }
+
+                        @include druga{
+                            font-size: 1em;
+                        }
+
+                        @include sedma{
+                            padding-top: 5%;
+                        }
+
+                        
+                    }
+
+                    i{
+                        font-size: 3.3em;
+                        color: lighten(#424242, 15%);
+
+                        @include prva{
+                            font-size: 2.3em;
+                        }
+
+                        @include druga{
+                            font-size: 2.1em;
+                        }
+                    }
+                }
+
+
+            .imgholdeprva{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include treca{
+                    margin: 5% 0%;
+                }
+
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    
+                    @include treca{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+        }
+
+    }
+
+    .imag4{
+        font-family: 'Righteous', cursive;
+        margin: 13% 0%;
+
+        .row3{
+
+            .specPad1{
+                 
+                .cont2{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    h3{
+                        font-size: 4em;
+                        padding-bottom: 10%;
+                        color: rgb(221, 166, 63);
+
+                        @include sesta{
+                            font-size: 3em;
+                        }
+
+                        @include osma{
+                            font-size: 2.5em;
+                        }
+
+                        @include deveta{
+                            font-size: 2em;
+                        }
+
+                        label{
+                            color: rgb(221, 166, 63);
+                            font-size: 1em;
+                            border-bottom: 5px solid orange;
+                            padding-bottom: 2.4%;
+                        }
+                    }
+
+                    .cards{
+                        width: 80%;
+                        display: flex;
+                        justify-content: space-around;
+                        text-align: center;
+                        margin-top: 5%;
+
+                        @include treca{
+                            width: 100%;
+                            justify-content: space-between;
+                        }
+
+                        @include cetvrta{
+                            flex-direction: column;
+                            align-items: center;
+                        }
+
+                        .card2{
+                            background-color: darken(#424242, 5%);
+
+                            @include cetvrta{
+                                width: 60%;
+                                margin-bottom: 15%;
+                            }
+
+                            @include deveta{
+                                width: 90%;
+                            }
+                        }
+
+
+                        .c0{
+
+                            @include cetvrta{
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+
+
+
+                        .spec12{
+                            
+                            max-width: 100%;
+                            height: auto;
+
+                            @include cetvrta{
+                                width: 100%;
+                            }
+                        }
+
+                        p{
+                            color: whitesmoke;
+                            font-size: 1.5em;
+                        }
+
+                        a{
+                            text-decoration: none;
+
+                        .act{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: .7s;
+
+                            &:hover{
+                                background-color: rgb(212, 95, 17);
+                            }
+
+                            p{
+                                text-decoration: none;
+                                margin: 0px;
+                                font-size: 1.25em;
+                                color: rgb(233, 160, 25);
+                            }
+                        }
+
+                    }
+                    }
+                }
+            }
+        }
+    }
+
+    .imag5{
+        margin-bottom: 15%;
+        font-family: 'Righteous', cursive;
+
+        .row4{
+
+            .slideprva{
+
+                .slide1{
+
+                    h3{
+                        color: orange;
+                        font-size: 3em;
+                    }
+
+                    h5{
+                        color: lighten(#c51e1e, 15%);
+                        font-size: 2.5em;
+                    }
+                }
+            }
+        }
+    }
+
+    .imag6{
+        position: absolute;
+        border-top: 4px solid grey;
+        font-family: 'Righteous', cursive;
+
+        .row5{
+            padding-top: 4%;
+
+        .colFoot1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .colFoot2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ul{
+                list-style-type: none;
+                
+                li{
+                    text-align: center;
+                    margin: 13% 0%;
+
+                    a{
+                        text-decoration: none;
+                        color: whitesmoke;
+                        font-size: 1.2em;
+                        transition: 0.7s;
+
+                        &:hover{
+                            color: orange;
+                        }
+                    }
+                }
+            }
+        }
+
+        .colFoot3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include treca{
+                margin: 1% 0%;
+            }
+
+            @include sedma{
+                margin-top: 5%;
+            }
+
+            .linksSass{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                ul{
+                    list-style-type: none;
+                    width: 100%;
+
+                    @include treca{
+                        display: flex;
+                        justify-content: space-around;
+                    }
+
+                    @include deveta{
+                        justify-content: space-between;
+                    }
+                    
+                    li{
+                        text-align: center;
+                        margin: 5% 0%;
+
+                        @include treca{
+                            margin: 5% 0%;
+                        }
+    
+                        a{
+                            text-decoration: none;
+                            color: whitesmoke;
+                            font-size: 1.2em;
+                            transition: 0.7s;
+
+                            @include deveta{
+                                font-size: 1em;
+                            }
+    
+                            &:hover{
+                                color: orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+
+
+}
+
+
+body{
+
+    .menuFluid{
+        margin: 14% 0%;
+
+        @include cetvrta{
+            margin: 25% 0%;
+        }
+
+        @include osma{
+            margin: 35% 0%;
+        }
+
+        h2{
+            color: orange;
+            text-align: center;
+            padding-bottom: 5%;
+            font-size: 3.4em;
+
+            @include sedma{
+                font-size: 2.7em;
+            }
+
+            @include osma{
+                font-size: 2em;
+                
+            }
+
+            label{
+                color: orange;
+                font-size: 1em;
+                border-bottom: 4px solid rgb(219, 151, 25);
+                padding-bottom: 2%;
+            }
+        }
+
+        .menuCont{
+
+            .rowMenu{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #353535;
+                margin: 5% 0%;
+
+                @include peta{
+                    margin: 10% 0%;
+                }
+
+                .holderMenu{
+
+                    .picMenu{
+                        max-width: 100%;
+                        height: auto;
+
+                        
+                    }
+                }
+
+                .pricesHolder{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                    @include treca{
+                        margin: 3% 0%;
+                    }
+
+                    .price{
+                        width: 45%;
+
+                        @include sedma{
+                            width: 100%;
+                        }
+
+                        .priceTag{
+                            display: flex;
+                            justify-content: space-between;
+                            border-bottom: 4px solid orange;
+
+                            @include sedma{
+                                border-bottom: 4px solid orange;
+                            }
+
+                            h3{
+                                color: orange;
+                                padding: 2% 0%;
+                            }
+
+                            p{
+                                margin-bottom: 0px;
+                                padding-top: 2%;
+                                font-size: 1.5em;
+                                color: whitesmoke;
+                            }
+                        }
+                    }
+                }
+
+                .colPic1{
+                    padding: 0px;
+                }
+
+                .colPic2{
+                    padding: 0px;
+                }
+
+                .colPic3{
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}
+
+body{
+
+    .aboutFluid{
+
+        width: 100%;
+        margin: 10% 0%;
+        font-family: 'Righteous', cursive;
+        padding: 10% 0%;
+
+        @include treca{
+            margin: 15% 0%;
+        }
+
+        @include sedma{
+            margin: 25% 0%;
+        }
+
+        @include osma{
+            margin: 35% 0%;
+        }
+
+        
+
+
+        .aboutCont{
+            background-color: #353535;
+            width: 100%;
+
+            h2{
+                color: rgb(241, 170, 36);
+                text-align: center;
+                font-size: 3em;
+                padding-bottom: 3%;
+                padding-top: 4%;
+
+                @include cetvrta{
+                    padding-bottom: 7%;
+                }
+
+                @include sedma{
+                    font-size: 2.3em;
+                }
+
+                @include deveta{
+                    font-size: 2em;
+                }
+
+                label{
+                    font-size: 1em;
+                    color: rgb(241, 170, 36);
+                    border-bottom: 4px solid orange;
+                    padding-bottom: 1.3%;
+
+                    @include cetvrta{
+                        padding-bottom: 5%;
+                    }
+                }
+            }
+
+            p{
+                color: whitesmoke;
+                font-weight: bold;
+                text-align: justify;
+                padding-bottom: 4%;
+            }
+        }
+
+        .rowCont2{
+            background-color: yellow;
+            margin: 7% 0%;
+            width: 100%;
+
+            @include cetvrta{
+                margin: 15% 0%;
+            }
+
+            .colAbout1{
+                padding: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url('../images/aboutCover.jpeg');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+
+
+            .yellowHolder{
+                width: 100%;
+                background-color: rgba(241, 238, 14, 0.4);
+
+                p{
+                    margin-bottom: 0px;
+                    font-size: 2em;
+                    padding: 2% 0%;
+                    text-align: center;
+
+                    @include cetvrta{
+                        font-size: 1.5em;
+                        font-weight: bold;
+                    }
+
+                    @include sesta{
+                        font-size: 1.3em;
+                    }
+
+                    @include sedma{
+                        font-size: 1.1em;
+                    }
+
+                    @include osma{
+                        font-size: 1em;
+                    }
+
+                    @include deveta{
+                        font-size: 1.4em;
+                    }
+                }
+            }
+
+
+        }
+
+        .colSpec4{
+                width: 100%;
+                background-image: url('../images/aboutCoverSecond.jpeg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+        }
+        }
+    }
+}
+
+
+body{
+
+    .contactFluid{
+        margin: 10% 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Righteous', cursive;
+        padding: 0px;
+
+        h2{
+            font-size: 3.6em;
+            color: rgb(223, 158, 39);
+
+            @include druga{
+                padding-top: 10%;
+            }
+
+            @include peta{
+                font-size: 3em;
+            }
+
+            @include sesta{
+                padding-top: 20%;
+            }
+
+            @include osma{
+                padding-top: 30%;
+                font-size: 2em;
+            }
+
+            label{
+                font-size: 1em;
+                color: rgb(223, 148, 10);
+                border-bottom: 5px solid orange;
+                padding-bottom: 4%;
+            }
+        }
+
+        .contactCont{
+            margin: 5% 0%;
+
+            form{
+                color: orange;
+
+                .input-field{
+                    margin: 4% 0%;
+                }
+                
+                .input-field label {
+                    color: whitesmoke;
+                  }
+                  /* label focus color */
+                  .input-field input[type=text]:focus + label {
+                    color: rgb(238, 165, 29);
+                  }
+                  /* label underline focus color */
+                  .input-field input[type=text]:focus {
+                    border-bottom: 1px solid orange;
+                    box-shadow: 0 1px 0 0 orange;
+                  }
+                  /* valid color */
+                  .input-field input[type=text].valid {
+                    border-bottom: 1px solid #000;
+                    box-shadow: 0 1px 0 0 #000;
+                  }
+                  /* invalid color */
+                  .input-field input[type=text].invalid {
+                    border-bottom: 1px solid #000;
+                    box-shadow: 0 1px 0 0 #000;
+                  }
+                  /* icon prefix focus color */
+                  .input-field .prefix.active {
+                    color: lighten(orange, 30%);
+                  }
+
+                  .input-field textarea:focus + label {
+                    color: rgb(238, 165, 29);
+                  }
+
+                  .input-field textarea:focus {
+                    border-bottom: 1px solid orange;
+                    box-shadow: 0 1px 0 0 orange;
+                  }
+
+                  .butContact{
+                      display: block;
+                      margin: 40px auto;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      background-color: orange;
+                    width: 15%;
+                    height: 50px;
+
+                    @include treca{
+                        width: 25%;
+                    }
+
+                  }
+            }
+        }
+
+        .mapHolder{
+            width: 100%;
+            margin-top: 5%;
+
+            iframe{
+                width: 100%;
+            }
+        }
+    }
+}
+
+body{
+
+    .authorFluid{
+        margin: 15% 0%;
+        font-family: 'Righteous', cursive;
+
+        @include peta{
+            margin: 25% 0%;
+        }
+
+        @include osma{
+            margin: 35% 0%;
+        }
+
+        .authorCont{
+            padding: 2% 0%;
+
+            .colAuthor{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h2{
+                    font-size: 3.5em;
+                    color: rgb(223, 148, 10);
+
+                    label{
+                        font-size: 1em;
+                        color: rgb(223, 148, 10);
+                        border-bottom: 5px solid orange;
+                        padding-bottom: 4%;
+                    }
+                }
+
+                p{
+                    padding: 8% 2%;
+                    color: whitesmoke;
+                }
+
+                .linkSoc{
+                    width: 70%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    @include osma{
+                        width: 100%;
+                    }
+
+                    a{
+                        text-decoration: none;
+                        transition: 1s;
+
+                        &:nth-child(1){
+                            color: orange;
+                        }
+
+                        &:nth-child(2){
+                            color: blue;
+                        }
+
+                        &:nth-child(3){
+                            color: blueviolet;
+                        }
+
+                        &:hover{
+                            transform: translateY(-10px);
+                        }
+                        
+                        i{
+                            font-size: 3em;
+
+                            
+                        }
+                    }
+                }
+
+                .imageAuthor{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include treca{
+                        margin-top: 15%;
+                    }
+
+                    @include osma{
+                        margin-top: 30%;
+                    }
+
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                        border: 5px solid orange;
+                    }
+                }
+
+            }
+        }
+    }
+}

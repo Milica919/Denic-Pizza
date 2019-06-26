@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>index.html</loc>
+<lastmod>2019-06-25</lastmod>
+<changefreq>daily</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>aboutUs.html</loc>
+<lastmod>2019-06-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>menu.html</loc>
+<lastmod>2019-06-22</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.89</priority>
+</url>
+<url>
+<loc>contact.html</loc>
+<lastmod>2018-09-22</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>author.html</loc>
+<lastmod>2018-10-03</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.5</priority>
+</url>
+</urlset>
